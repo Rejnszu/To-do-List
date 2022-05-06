@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="app.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+        defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+        defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        defer></script>
+
+</head>
+
+<body>
+    <div class="container-fluid toDo-content">
+        <div class="container">
+            <h1>Add thing to do</h1>
+            <div class="row">
+                <div class="col-sm-12 toDo-add-item">
+                    <div class="input-container">
+                        <label for="toDo">Insert your task below</label>
+                        <input type="text" name="toDo" id="toDo">
+                        <span id="warning" class="warning">Please insert a title of task!</span>
+                    </div>
+                    <button class="add_task_button">Add task</button>
+                </div>
+                <div class="col-sm-12 toDo-list">
+
+                    <ul class="toDo-list-ul">
+                        <template data-toDo-item>
+                            <li class="toDo-list-item">
+                                <p class="task" data-toDo-title>Title</p>
+                                <p class="date" data-toDo-date>Date of adding</p>
+                                <div class="buttons"><button class="remove"
+                                        data-toDo-button-completed>Completed</button><button class="completed"
+                                        data-toDo-button-remove>Remove</button></div>
+                            </li>
+                        </template>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
